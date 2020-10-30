@@ -1,0 +1,34 @@
+﻿<Window x:Class="RapidBSP.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:RapidBSP"
+        mc:Ignorable="d"
+        Title="RapidBSP" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="41*"/>
+            <ColumnDefinition Width="12*"/>
+            <ColumnDefinition Width="57*"/>
+            <ColumnDefinition Width="690*"/>
+        </Grid.ColumnDefinitions>
+        <Menu Margin="0,0,0,388" Grid.ColumnSpan="4">
+            <MenuItem Header="File" Height="24" Width="37" FontSize="12">
+                <MenuItem Header="Open File" Click="menuOpen_Click"/>
+                <MenuItem Header="Open Directory" Click="menuDirOpen_Click"/>
+            </MenuItem>
+        </Menu>
+        <ListBox Name="fileList" Grid.Column="3" Margin="196,150,10,10" PreviewMouseDown="fileList_OnPreviewMouseDown"/>
+        <Label Name="fileCount" Grid.Column="3" HorizontalAlignment="Left" Margin="196,113,0,0" VerticalAlignment="Top" Width="78"/>
+        <Label Name="validBSPContent" Content="IsValidBSP?" HorizontalAlignment="Center" Margin="0,31,0,0" VerticalAlignment="Top" Grid.ColumnSpan="3"/>
+        <Label Name="validBSP" Grid.Column="2" HorizontalAlignment="Left" Margin="36,31,0,0" VerticalAlignment="Top" RenderTransformOrigin="-1.5,0.704" Width="53" Grid.ColumnSpan="2"/>
+        <Label Name="byteSizeContent" Content="Size in bytes: " HorizontalAlignment="Left" Margin="17,52,0,0" VerticalAlignment="Top" Grid.ColumnSpan="3"/>
+        <Label Name="byteSize" Grid.Column="2" HorizontalAlignment="Left" Margin="51,52,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
+        <Label Name="offsetContent" Content="Lump Offset:" HorizontalAlignment="Left" Margin="17,73,0,0" VerticalAlignment="Top" Grid.ColumnSpan="3"/>
+        <Label Name="offsetLbl" Grid.Column="2" HorizontalAlignment="Left" Margin="51,73,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
+        <ListBox Name="lumpsList" Margin="10,150,514,10" Grid.ColumnSpan="4"/>
+        <Label Name="versionContent" Content="Lump Version:" HorizontalAlignment="Left" Margin="17,95,0,0" VerticalAlignment="Top" Grid.ColumnSpan="3"/>
+        <Label Name="versionLbl" Grid.Column="3" HorizontalAlignment="Left" Margin="0,95,0,0" VerticalAlignment="Top"/>
+    </Grid>
+</Window>
