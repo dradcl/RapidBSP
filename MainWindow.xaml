@@ -19,16 +19,19 @@
                 <MenuItem Header="Open Directory" Click="menuDirOpen_Click"/>
             </MenuItem>
         </Menu>
-        <ListBox Name="fileList" Grid.Column="3" Margin="196,150,10,10" PreviewMouseDown="fileList_OnPreviewMouseDown"/>
+        <ListBox Name="fileList" Grid.Column="3" Margin="196,150,10,10" SelectionChanged="fileList_SelectionChanged"/>
         <Label Name="fileCount" Grid.Column="3" HorizontalAlignment="Left" Margin="196,113,0,0" VerticalAlignment="Top" Width="78"/>
-        <Label Name="validBSPContent" Content="IsValidBSP?" HorizontalAlignment="Center" Margin="0,31,0,0" VerticalAlignment="Top" Grid.ColumnSpan="3"/>
-        <Label Name="validBSP" Grid.Column="2" HorizontalAlignment="Left" Margin="36,31,0,0" VerticalAlignment="Top" RenderTransformOrigin="-1.5,0.704" Width="53" Grid.ColumnSpan="2"/>
-        <Label Name="byteSizeContent" Content="Size in bytes: " HorizontalAlignment="Left" Margin="17,52,0,0" VerticalAlignment="Top" Grid.ColumnSpan="3"/>
-        <Label Name="byteSize" Grid.Column="2" HorizontalAlignment="Left" Margin="51,52,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
-        <Label Name="offsetContent" Content="Lump Offset:" HorizontalAlignment="Left" Margin="17,73,0,0" VerticalAlignment="Top" Grid.ColumnSpan="3"/>
-        <Label Name="offsetLbl" Grid.Column="2" HorizontalAlignment="Left" Margin="51,73,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
-        <ListBox Name="lumpsList" Margin="10,150,514,10" Grid.ColumnSpan="4"/>
-        <Label Name="versionContent" Content="Lump Version:" HorizontalAlignment="Left" Margin="17,95,0,0" VerticalAlignment="Top" Grid.ColumnSpan="3"/>
-        <Label Name="versionLbl" Grid.Column="3" HorizontalAlignment="Left" Margin="0,95,0,0" VerticalAlignment="Top"/>
+        <Label Name="validBSPContent" Content="IsValidBSP?" HorizontalAlignment="Left" Margin="196,82,0,0" VerticalAlignment="Top" Grid.Column="3"/>
+        <Label Name="validBSP" Grid.Column="3" HorizontalAlignment="Left" Margin="267,82,0,0" VerticalAlignment="Top" RenderTransformOrigin="-1.5,0.704" Width="53"/>
+        <Label Name="byteSizeContent" Content="Size (bytes): " HorizontalAlignment="Center" Margin="0,82,0,0" VerticalAlignment="Top" Grid.ColumnSpan="3"/>
+        <Label Name="byteSize" Grid.Column="2" HorizontalAlignment="Left" Margin="51,82,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
+        <Label Name="offsetContent" Content="Offset:" HorizontalAlignment="Left" Margin="17,103,0,0" VerticalAlignment="Top" Grid.ColumnSpan="3"/>
+        <Label Name="offsetLbl" Grid.Column="2" HorizontalAlignment="Left" Margin="51,103,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
+        <ListBox Name="lumpsList" Margin="10,150,514,10" Grid.ColumnSpan="4" SelectionChanged="lumpsList_SelectionChanged"/>
+        <Label Name="versionContent" Content="Version:" HorizontalAlignment="Left" Margin="17,125,0,0" VerticalAlignment="Top" Grid.ColumnSpan="3"/>
+        <Label Name="versionLbl" Grid.Column="3" HorizontalAlignment="Left" Margin="0,125,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lumpInfoContent" Content="Lump Information" HorizontalAlignment="Left" Margin="10,30,0,0" VerticalAlignment="Top" Grid.ColumnSpan="4"/>
+        <Label Name="lumpTypeContent" Content="Type" HorizontalAlignment="Left" Margin="17,61,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
+        <Label Name="lumpType" Grid.Column="2" HorizontalAlignment="Left" Margin="0,61,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2" Width="370"/>
     </Grid>
 </Window>
